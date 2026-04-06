@@ -1,5 +1,4 @@
-const { invoke } = window.__TAURI__.core;
-const { Channel } = window.__TAURI__.core;
+const { invoke, Channel } = window.__TAURI__.core;
 
 const searchInput = document.getElementById('search');
 const entitySelect = document.getElementById('entity-type');
@@ -350,6 +349,7 @@ document.addEventListener('keydown', (e) => {
   }
 
   if (document.activeElement === searchInput) return;
+  if (document.activeElement.closest('.popover')) return;
   if (!['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', 'Enter'].includes(e.key)) return;
 
   const cards = [...grid.querySelectorAll('.card')];

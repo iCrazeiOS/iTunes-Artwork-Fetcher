@@ -6,7 +6,7 @@
   "build": {
     "frontendDist": "../src",
     "devUrl": "http://localhost:1420",
-    "beforeDevCommand": "python3 -m http.server 1420 -d src",
+    "beforeDevCommand": "python -m http.server 1420 -d src",
     "beforeBuildCommand": ""
   },
   "app": {
