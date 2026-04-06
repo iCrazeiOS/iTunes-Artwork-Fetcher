@@ -1,0 +1,14 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nicedoc/tauri/master/crates/tauri-utils/schema.json",
+  "identifier": "default",
+  "description": "Default capabilities for the app",
+  "windows": ["main"],
+  "permissions": [
+    "core:default",
+    "clipboard-manager:allow-write-image",
+    "clipboard-manager:allow-read-image",
+    "dialog:allow-save",
+    "shell:allow-open",
+    "drag:allow-start-drag"
+  ]
+}

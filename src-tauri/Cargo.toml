@@ -1,0 +1,23 @@
+[package]
+name = "itunes-artwork-fetcher"
+version = "1.0.0"
+edition = "2021"
+
+[lib]
+name = "app_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-clipboard-manager = "2"
+tauri-plugin-dialog = "2"
+tauri-plugin-shell = "2"
+tauri-plugin-drag = "2"
+reqwest = { version = "0.12", features = ["rustls-tls", "json"], default-features = false }
+serde_json = "1"
+urlencoding = "2"
+image = { version = "0.25", default-features = false, features = ["jpeg", "png"] }
+tokio = { version = "1", features = ["fs"] }

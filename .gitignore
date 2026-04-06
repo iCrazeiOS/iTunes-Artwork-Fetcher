@@ -1,0 +1,8 @@
+*.DS_Store
+node_modules/
+
+# Rust / Tauri build artifacts
+src-tauri/target/
+
+# Generated files
+src-tauri/gen/

@@ -1,0 +1,27 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nicedoc/tauri/master/crates/tauri-config-schema/schema.json",
+  "productName": "iTunes Artwork Fetcher",
+  "version": "1.0.0",
+  "identifier": "com.itunes-artwork-fetcher.app",
+  "build": {
+    "frontendDist": "../src",
+    "devUrl": "http://localhost:1420",
+    "beforeDevCommand": "python3 -m http.server 1420 -d src",
+    "beforeBuildCommand": ""
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [
+      {
+        "title": "iTunes Artwork Fetcher",
+        "width": 1200,
+        "height": 800,
+        "minWidth": 400,
+        "minHeight": 400
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; connect-src 'self' https://artwork.dodoapps.io; img-src 'self' https://*.mzstatic.com; style-src 'self' 'unsafe-inline'; script-src 'self' 'wasm-unsafe-eval'"
+    }
+  }
+}
